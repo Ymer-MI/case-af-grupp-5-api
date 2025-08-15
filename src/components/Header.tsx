@@ -1,15 +1,16 @@
+import '../css/Header.css'
 import { NavLink } from 'react-router'
-import { Icon } from '@iconify/react'
+import { DigiIconArrowLeft } from '@digi/arbetsformedlingen-react'
 
 export const Header = () => {
-    return <header className='grid grid-cols-3 items-center'>
+    return <header>
         <div>
-            { !location.href.endsWith('/') ? <button className='align-middle' type='button' onClick={() => history.back()}><Icon icon='eva:arrow-back-outline' width='32'></Icon>Back</button> : <></> }
+            { !location.href.endsWith('/') ? <button type='button' onClick={() => history.back()}><DigiIconArrowLeft/>Tillbaka</button> : <></> }
         </div>
-        <h1></h1>
-        <nav className='justify-self-end'>
-            <ul className='flex gap-4'>
-                <li><NavLink to='/'></NavLink></li>
+        <h1>Jobbs&ouml;k</h1>
+        <nav>
+            <ul>
+                <li><NavLink to='/'>Hem</NavLink></li>
             </ul>
         </nav>
     </header>
