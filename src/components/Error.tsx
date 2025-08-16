@@ -1,10 +1,31 @@
-import { Section } from './styled/Wrappers'
-import { Button } from './styled/Buttons'
+import { isRouteErrorResponse, useNavigate, useRouteError, type ErrorResponse } from 'react-router'
+import { DigiLinkInternal, DigiNotificationErrorPage } from '@digi/arbetsformedlingen-react'
+import { ErrorPageStatusCodes } from '@digi/arbetsformedlingen'
 
 export const Error = () => {
-    return <Section>
-        <h1>404 - Not Found</h1>
-        <p>The page you are looking for does not exist.</p>
-        <Button type='button' onClick={ () => location.href = '/' }>Return home</Button>
-    </Section>
+    const error = useRouteError(), navigate = useNavigate()
+    
+    return <DigiNotificationErrorPage afHttpStatusCode={ isRouteErrorResponse(error) ? (error as ErrorResponse).status as unknown as ErrorPageStatusCodes : ErrorPageStatusCodes.INTERNAL_SERVER_ERRROR } afCustomHeading='Ett fel har intr&auml;ffat'>
+        <p slot='bodytext'>
+            {
+                isRouteErrorResponse(error) ? error.statusText : 
+                    error instanceof Error ? (error as Error).message : 
+                    typeof error === 'string' ? error : 
+                    'Ett ok&auml;nt fel har intr&auml;ffat.'
+            }
+        </p>
+            
+        <ul slot='links'>
+            <li>
+                <DigiLinkInternal onAfOnClick={() => { navigate(-1) }} afVariation='small'>
+                    Till föregående sida
+                </DigiLinkInternal>
+            </li>
+            <li>
+                <DigiLinkInternal afHref='/' afVariation='small'>
+                    Till startsidan
+                </DigiLinkInternal>
+            </li>
+        </ul>
+    </DigiNotificationErrorPage>
 }
