@@ -2,4 +2,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    digi-typography h1 {
+        margin: 0;
+    }
+
+    .sc-digi-header-navigation-h nav.digi-header-navigation__wrapper.sc-digi-header-navigation {
+        border: none;
+
+        li .sc-digi-header-navigation-item-h .sc-digi-header-navigation-item-s > a {
+            border-radius: .5rem;
+
+            &:hover {
+                color: #222;
+            }
+        }
+    }
 }

@@ -1,0 +1,8 @@
+:root {
+    --digi--color--text--primary: #ddd;
+
+    --digi--color--background--neutral-6: #0d0;
+    --digi--color--background--neutral-8: inherit;
+
+    --digi--header-navigation-item--color-hover: #222;
+}
