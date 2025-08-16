@@ -1,0 +1,29 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    > digi-typography {
+        width: 100%;
+        
+        > .digi-typography > p {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            width: 100%;
+            text-align: center;
+    
+            > p {
+                margin: 0;
+            }
+    
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+    }
+}
