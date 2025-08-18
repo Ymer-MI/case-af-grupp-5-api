@@ -1,0 +1,10 @@
+header, footer {
+    background-color: #222;
+}
+
+main {
+    align-self: center;
+    flex: 1;
+    width: 80%;
+    background-color: #444;
+}

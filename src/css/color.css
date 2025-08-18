@@ -1,0 +1,14 @@
+:root {
+    --green: #0d0;
+
+    --digi--color--background--neutral-6: var(--green);
+    --digi--color--background--neutral-8: inherit;
+    
+    --digi--header-navigation-item--color-hover: #222;
+    
+    --digi--color--text--primary: #ddd;
+
+    --digi--color--text--link: var(--green);
+    --digi--color--text--link-visited: #080;
+
+}
