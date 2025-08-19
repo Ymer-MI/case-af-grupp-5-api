@@ -1,3 +1,10 @@
 import SearchForm from '../components/SearchForm'
 
-export default () => <SearchForm/>
+export default function Home() {
+  return (
+    <section>
+      <SearchForm />
+
+    </section>
+  )
+}
