@@ -4,6 +4,7 @@ import { DigiLoaderSpinner } from '@digi/arbetsformedlingen-react'
 import { LoaderSpinnerSize } from '@digi/arbetsformedlingen'
 import { Layout } from './pages/Layout'
 import { Error } from './components/Error'
+import Home from './pages/Home'
 
 export const router = createBrowserRouter([
     {
@@ -14,6 +15,11 @@ export const router = createBrowserRouter([
                 </Suspense>,
         errorElement: <Error />,
         children: [
+            {
+                index: true,
+                element: <Home />
+            }
+            
         ]
     }
 ])

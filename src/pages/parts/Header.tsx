@@ -1,4 +1,4 @@
-import '../css/Header.css'
+import '../../css/Header.css'
 import { NavLink } from 'react-router'
 import { DigiHeaderNavigation, DigiHeaderNavigationItem, DigiIconArrowLeft, DigiTypography } from '@digi/arbetsformedlingen-react'
 import { TypographyVariation } from '@digi/arbetsformedlingen'

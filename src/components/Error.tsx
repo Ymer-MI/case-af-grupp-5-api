@@ -14,7 +14,6 @@ export const Error = () => {
                     'Ett ok&auml;nt fel har intr&auml;ffat.'
             }
         </p>
-            
         <ul slot='links'>
             <li>
                 <DigiLinkInternal onAfOnClick={() => { navigate(-1) }} afVariation='small'>
