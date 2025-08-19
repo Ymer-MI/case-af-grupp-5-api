@@ -11,10 +11,12 @@ header {
         border: none;
 
         li .sc-digi-header-navigation-item-h .sc-digi-header-navigation-item-s > a {
+            background-color: var(--color--green--darker);
             border-radius: .5rem;
 
             &:hover {
-                color: #222;
+                background-color: var(--color--green);
+                color: var(--color--black);
             }
         }
     }

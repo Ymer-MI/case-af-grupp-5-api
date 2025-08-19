@@ -1,10 +1,10 @@
 header, footer {
-    background-color: #222;
+    background-color: var(--color--black--darker);
 }
 
 main {
     align-self: center;
     flex: 1;
     width: 80%;
-    background-color: #444;
+    background-color: var(--color--black);
 }

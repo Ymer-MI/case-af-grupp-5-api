@@ -1,4 +1,4 @@
-import '../css/Footer.css'
+import '../../css/Footer.css'
 import { DigiTypography } from '@digi/arbetsformedlingen-react'
 import { TypographyVariation } from '@digi/arbetsformedlingen'
 

@@ -1,0 +1,15 @@
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    > * {
+        max-width: 50%;
+    }
+
+    .digi-form-input__input.sc-digi-form-input:focus-visible {
+        outline: 2px solid var(--color--green--darker);
+        outline-offset: -2px;
+        box-shadow: none;
+    }
+}
