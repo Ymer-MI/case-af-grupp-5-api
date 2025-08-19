@@ -2,7 +2,7 @@ export interface ISearchResult {
     hits: IJobAds[];
 }
 
-interface IJobAds {
+export interface IJobAds {
     occupation: {
         label: string
     }
