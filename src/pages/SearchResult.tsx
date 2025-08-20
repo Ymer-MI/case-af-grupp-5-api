@@ -10,7 +10,7 @@ export const SearchResults = () => {
 
   return <section>
     <DigiTypography afVariation={ TypographyVariation.LARGE }>
-      <h2>Resultat för &ldquo;{ q }&rdquo;</h2>
+      <h2>Resultat f&ouml;r &ldquo;{ q }&rdquo;</h2>
     </DigiTypography>
     {
       !hits?.length ?
