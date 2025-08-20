@@ -8,7 +8,7 @@ export interface ISearchResult {
     positions:             number,
     query_time_in_millis:  number,
     result_time_in_millis: number,
-//	    stats:                 any[],
+//  stats:                 any[],
     freetext_concepts:     IFreetextConcepts,
     hits:                  IHit[]
 }
