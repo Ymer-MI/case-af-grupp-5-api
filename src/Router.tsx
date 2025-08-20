@@ -5,8 +5,6 @@ import { LoaderSpinnerSize } from '@digi/arbetsformedlingen'
 import { Layout } from './pages/Layout'
 import { Error } from './components/Error'
 import Home from './pages/Home'
-import { SearchResults } from './pages/SearchResult'
-import { getJobs } from './services/jobSearchService'
 
 export const router = createBrowserRouter([
     {
@@ -20,16 +18,7 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />
-            },
-            { 
-                path: 'search',
-                loader: async ({ request }) => {
-                    const q = new URL(request.url).searchParams.get('q') ?? '', hits = q ? await getJobs(q) : []
-                    return { q, hits }
-                },
-                element: <SearchResults />
-            }
-            
-        ]
-    }
+            }, 
+           ]
+  }
 ])
