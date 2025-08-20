@@ -1,10 +1,15 @@
+import '../css/SearchForm.css'
 import { useNavigate } from 'react-router'
 import { useState } from 'react'
 import { DigiFormInputSearch } from '@digi/arbetsformedlingen-react'
 import { FormInputType, FormInputSearchVariation } from '@digi/arbetsformedlingen'
 
-export default () => {
-  const  navigate = useNavigate(), [searchValue, setSearchValue] = useState('')
+type SearchFormProps = {
+  query: string | null
+}
+
+export const SearchForm = ({ query}: SearchFormProps) => {
+  const  navigate = useNavigate(), [searchValue, setSearchValue] = useState(query || '')
 
   return <form onSubmit={(e) => {
       e.preventDefault()

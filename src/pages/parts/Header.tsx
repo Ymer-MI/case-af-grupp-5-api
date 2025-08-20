@@ -1,12 +1,12 @@
 import '../../css/Header.css'
-import { NavLink } from 'react-router'
+import { NavLink, useNavigate } from 'react-router'
 import { DigiHeaderNavigation, DigiHeaderNavigationItem, DigiIconArrowLeft, DigiTypography } from '@digi/arbetsformedlingen-react'
 import { TypographyVariation } from '@digi/arbetsformedlingen'
 
 export const Header = () => {
     return <header>
         <div>
-            { !location.href.endsWith('/') ? <button type='button' onClick={() => history.back()}><DigiIconArrowLeft/> Tillbaka</button> : <></> }
+            { location.href.split('/').length > 4 && <button type='button' onClick={() => useNavigate()(-1)}><DigiIconArrowLeft/> Tillbaka</button> }
         </div>
         <DigiTypography afVariation={TypographyVariation.LARGE}>
             <h1>Jobbs&ouml;k</h1>

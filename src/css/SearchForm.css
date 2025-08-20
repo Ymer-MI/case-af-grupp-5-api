@@ -8,8 +8,10 @@ form {
     }
 
     .digi-form-input__input.sc-digi-form-input:focus-visible {
-        outline: 2px solid var(--color--green--darker);
-        outline-offset: -2px;
+        --size-outline: 2px;
+
+        outline: var(--size-outline) solid var(--color--green--darker);
+        outline-offset: calc(var(--size-outline) * -1);
         box-shadow: none;
     }
 }

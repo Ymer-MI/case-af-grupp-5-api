@@ -10,18 +10,19 @@ import Home from './pages/Home'
 export const router = createBrowserRouter([
     {
         path: '/',
-        loader: async ({ request }) => {
-            const q = new URL(request.url).searchParams.get('q'), hits = q ? await getJobs(q) : []
-            return { q, hits }
-        },
-        element: <Suspense fallback={ <DigiLoaderSpinner afSize={ LoaderSpinnerSize.LARGE } afText='Laddar...' /> }>
-                    <Layout />
-                </Suspense>,
+        element: <Layout />,
         errorElement: <Error />,
         children: [
             {
                 index: true,
-                element: <Home />
+                loader: async ({ request }) => {
+                    const q = new URL(request.url).searchParams.get('q'), hits = q ? await getJobs(q) : []
+        
+                    return { q, hits }
+                },
+                element: <Suspense fallback={ <DigiLoaderSpinner afSize={ LoaderSpinnerSize.LARGE } afText='Laddar...' /> }>
+                    <Home />
+                </Suspense>
             }, 
            ]
   }
