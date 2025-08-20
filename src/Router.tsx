@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     {
         path: '/',
         loader: () => {},
-        element: <Suspense fallback={ <DigiLoaderSpinner afSize={ LoaderSpinnerSize.LARGE } afText='Laddar' /> }>
+        element: <Suspense fallback={ <DigiLoaderSpinner afSize={ LoaderSpinnerSize.LARGE } afText='Laddar...' /> }>
                     <Layout />
                 </Suspense>,
         errorElement: <Error />,
@@ -21,16 +21,14 @@ export const router = createBrowserRouter([
                 index: true,
                 element: <Home />
             },
-         { 
-        path: 'search',
-        loader: async ({ request }) => {
-          const url = new URL(request.url)
-          const q = url.searchParams.get('q') ?? ''
-          const hits = q ? await getJobs(q) : []
-          return { q, hits }
-        },
-        element: <SearchResults />
-        }
+            { 
+                path: 'search',
+                loader: async ({ request }) => {
+                    const q = new URL(request.url).searchParams.get('q') ?? '', hits = q ? await getJobs(q) : []
+                    return { q, hits }
+                },
+                element: <SearchResults />
+            }
             
         ]
     }
