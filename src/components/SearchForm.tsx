@@ -13,7 +13,7 @@ export const SearchForm = ({ query}: SearchFormProps) => {
 
   return <form onSubmit={(e) => {
       e.preventDefault()
-      navigate(`/?q=${ searchValue }`)
+      navigate(`?q=${ searchValue }`)
     }}>
     <DigiFormInputSearch afType={ FormInputType.SEARCH } afVariation={ FormInputSearchVariation.LARGE } afLabel='Jobbs&ouml;kning' afLabelDescription='S&ouml;k efter jobb med titel eller beskrivning' afButtonText='S&ouml;k' value={ searchValue } onAfOnInput={(e: CustomEvent<{ target: { value: string } }>) => { setSearchValue(e.detail.target.value) }}/>
   </form>
