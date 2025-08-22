@@ -9,8 +9,7 @@ export const Error = () => {
         <p slot='bodytext'>
             {
                 isRouteErrorResponse(error) ? error.statusText : 
-                    error instanceof Error ? (error as Error).message : 
-                    typeof error === 'string' ? error : 
+                    typeof error === 'string' ? error :
                     'Ett ok&auml;nt fel har intr&auml;ffat.'
             }
         </p>

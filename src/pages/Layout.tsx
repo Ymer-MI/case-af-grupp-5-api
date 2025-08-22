@@ -9,11 +9,11 @@ export const Layout = () => {
 
     return <body>
         <Header />
-            {/* <Context.Provider value={{ , dispatch }}> */}
+            {/* {<Context.Provider value={{ , dispatch }}>} */}
                 <main>
                     <Outlet />
                 </main>
-            {/* </Context.Provider> */}
+            {/* {</Context.Provider>} */}
         <Footer />
     </body>
 }
