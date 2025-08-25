@@ -12,11 +12,9 @@ type SearchResultsProps = {
 export const SearchResults = ({ query, ads}: SearchResultsProps) => {
 
     if (ads.length === 0) {
-        return <>
-            <DigiTypography>
-                <p>Inga träffar, testa ett annat ord.</p>
-            </DigiTypography>
-        </>
+        return <DigiTypography>
+            <p>Inga träffar, testa ett annat ord.</p>
+         </DigiTypography>
     }
 
     return <section className='results-container'>
