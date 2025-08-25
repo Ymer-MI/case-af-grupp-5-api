@@ -108,7 +108,7 @@ interface IEmployer {
 }
 
 interface IHave {
-    skills:           string[],
+    skills:           ISkill[],
 //  languages:        any[],
     work_experiences: IDuration[],
 //	education:        any[],
@@ -118,6 +118,10 @@ interface IHave {
 interface IScopeOfWork {
     min: number,
     max: number
+}
+
+interface ISkill {
+    label: string;
 }
 
 interface IWorkplaceAddress {
