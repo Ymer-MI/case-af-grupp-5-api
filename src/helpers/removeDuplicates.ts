@@ -1,6 +1,6 @@
-import type { IJobAds } from "../models/ISearchResult";
+import type { IHit } from "../models/ISearchResult";
 
-export const removeDuplicates = (list: IJobAds[]) => {
+export const removeDuplicates = (list: IHit[]) => {
     const jobTitles: string[] = [];
 
     const uniqueJobTitles = list.filter((l) => {

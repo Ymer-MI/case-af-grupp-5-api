@@ -1,0 +1,23 @@
+li {
+  margin: 0.5rem 0;
+
+  h3 {
+    color: var(--color--green);
+  }
+
+  h4 {
+    color: var(--color--white);
+  }
+
+  .sc-digi-layout-block-h {
+    --digi--layout-block--background--primary: var(--color--black--darker);
+  }
+
+  .sc-digi-button-h .digi-button--variation-secondary.sc-digi-button {
+    color: var(--color--white);
+    background-color: var(--color--black);
+    font-size: 0.9rem;
+    margin: 1px 6px 1px 0;
+    pointer-events: none;
+  }
+}

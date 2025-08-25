@@ -1,36 +1,36 @@
 :root {
-    --color--white: #ddd;
+  --color--white: #ddd;
 
-    
-    --color--black: #222;
-    --color--black--darker: #111;
-    
-    --color--gray--darker: #777;
-    
-    --color--green: #0d0;
-    --color--green--darker: #080;
+  --color--black: #222;
+  --color--black--darker: #111;
 
-    
-    --digi--color--background--neutral-6: var(--color--green);
-    --digi--color--background--neutral-8: inherit;
-    --digi--color--background--inverted-1: var(--color--green--darker);
-    --digi--color--background--inverted-6: var(--color--green);
+  --color--gray--darker: #777;
 
-    --digi--color--background--input: var(--color--black--darker);
-    --digi--color--background--input-empty: var(--digi--color--background--input);
+  --color--green: #0d0;
+  --color--green--darker: #080;
 
-    --digi--color--border--secondary: var(--digi--color--background--inverted-1);
-    --digi--color--border--inverted-2: var(--digi--color--background--inverted-6);
-    
-    --digi--header-navigation-item--color-hover: var(--color--black);
-    
-    --digi--color--text--primary: var(--color--white);
+  --digi--color--background--neutral-6: var(--color--green);
+  --digi--color--background--neutral-8: inherit;
+  --digi--color--background--inverted-1: var(--color--green--darker);
+  --digi--color--background--inverted-6: var(--color--green);
 
-    --digi--color--text--link: var(--color--green);
-    --digi--color--text--link-visited: var(--color--green--darker);
+  --digi--color--background--input: var(--color--black--darker);
+  --digi--color--background--input-empty: var(--digi--color--background--input);
 
-    .sc-digi-button-h {
-        --digi--button--color--text--primary--hover: var(--color--black);
-        --digi--button--color--icon--primary--hover: var(--digi--button--color--icon--primary--hover);
-    }
+  --digi--color--border--secondary: var(--digi--color--background--inverted-1);
+  --digi--color--border--inverted-2: var(--digi--color--background--inverted-6);
+
+  --digi--header-navigation-item--color-hover: var(--color--black);
+
+  --digi--color--text--primary: var(--color--white);
+
+  --digi--color--text--link: var(--color--green);
+  --digi--color--text--link-visited: var(--color--green--darker);
+
+  .sc-digi-button-h {
+    --digi--button--color--text--primary--hover: var(--color--black);
+    --digi--button--color--icon--primary--hover: var(
+      --digi--button--color--icon--primary--hover
+    );
+  }
 }
