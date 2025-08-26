@@ -6,9 +6,7 @@
   .results {
     margin-top: 1rem;
 
-    digi-typography,
-    ol {
-      list-style-type: none;
+    digi-typography, ul {
       max-width: var(--digi--paragraph-width--large);
     }
   }
