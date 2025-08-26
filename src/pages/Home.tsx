@@ -1,16 +1,14 @@
 import { useLoaderData } from 'react-router'
+import type { IParams } from '../models/IParams'
 import type { IHit } from '../models/ISearchResult'
 import { SearchForm } from '../components/SearchForm'
 import { SearchResults } from '../components/SearchResults'
-import { removeDuplicates } from '../helpers/removeDuplicates'
 
 export default () => {
-  const { q, hits } = useLoaderData<{ q: string | null, hits: IHit[] }>()
+    const { parameters, hits } = useLoaderData<{ parameters: IParams, hits: IHit[] }>()
 
-  const ads = removeDuplicates(hits);
-  
-  return <>
-    <SearchForm query={ q }/>
-    { q && <SearchResults query={ q } ads={ ads } /> }
-  </>
+    return <>
+        <SearchForm parameters={ parameters }/>
+        { parameters.query && <SearchResults query={ parameters.query } ads={ hits } /> }
+    </>
 }

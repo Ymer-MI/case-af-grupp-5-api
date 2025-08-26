@@ -4,8 +4,8 @@ import { DigiLoaderSpinner } from '@digi/arbetsformedlingen-react'
 import { LoaderSpinnerSize } from '@digi/arbetsformedlingen'
 import { Layout } from './pages/Layout'
 import { Error } from './components/Error'
-import { JobSearchService } from './services/jobSearchService'
 import Home from './pages/Home'
+import jobsLoader from './loaders/jobsLoader'
 
 export const router = createBrowserRouter([
     {
@@ -15,14 +15,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: async ({ request }) => {
-                    const params = new URL(request.url).searchParams, q = params.get('q'), lim = params.get('limit'), off = params.get('offset')
-        
-                    return { q, hits: q ? await new JobSearchService().getJobs(q, {
-                        limit: lim ? +lim : undefined,
-                        offset: off ? +off: undefined
-                    }) : [] }
-                },
+                loader: jobsLoader,
                 element: <Suspense fallback={ <DigiLoaderSpinner afSize={ LoaderSpinnerSize.LARGE } afText='Laddar...' /> }>
                     <Home />
                 </Suspense>
