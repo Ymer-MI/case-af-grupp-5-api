@@ -1,8 +1,8 @@
 import type { IHit } from '../models/ISearchResult'
 import { TypographyVariation } from '@digi/arbetsformedlingen'
 import { DigiTypography } from '@digi/arbetsformedlingen-react'
-import { SearchResultCard } from './SearchResultCard'
 import "../css/SearchResults.css"
+import { SearchResultCard } from './SearchResultCard'
 
 type SearchResultsProps = {
     query: string,
