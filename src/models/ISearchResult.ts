@@ -9,8 +9,15 @@ export interface ISearchResult {
     query_time_in_millis:  number,
     result_time_in_millis: number,
 //  stats:                 any[],
-    freetext_concepts:     IFreetextConcepts,
-    hits:                  IHit[]
+freetext_concepts:     IFreetextConcepts,
+hits:                  IHit[]
+}
+
+export interface IOccupation {
+    concept_id:             string,
+    label:                  string,
+    legacy_ams_taxonomy_id: string,
+    weight?:                number
 }
 
 export interface IHit {
@@ -25,11 +32,11 @@ export interface IHit {
     application_deadline:     Date,
     number_of_vacancies:      number,
     description:              IDescription,
-    employment_type:          IDuration,
-    salary_type:              IDuration,
+    employment_type:          IOccupation,
+    salary_type:              IOccupation,
     salary_description:       null | string,
-    duration:                 IDuration,
-    working_hours_type:       IDuration,
+    duration:                 IOccupation,
+    working_hours_type:       IOccupation,
     scope_of_work:            IScopeOfWork,
     access:                   null,
     employer:                 IEmployer,
@@ -38,9 +45,9 @@ export interface IHit {
     access_to_own_car:        boolean,
     driving_license_required: boolean,
     driving_license:          null,
-    occupation:               IDuration,
-    occupation_group:         IDuration,
-    occupation_field:         IDuration,
+    occupation:               IOccupation,
+    occupation_group:         IOccupation,
+    occupation_field:         IOccupation,
     workplace_address:        IWorkplaceAddress,
     must_have:                IHave,
     nice_to_have:             IHave,
@@ -91,12 +98,6 @@ interface IDescription {
     conditions:          null | string
 }
 
-interface IDuration {
-    concept_id:             string,
-    label:                  string,
-    legacy_ams_taxonomy_id: string,
-    weight?:                number
-}
 
 interface IEmployer {
     phone_number:        null,
@@ -110,7 +111,7 @@ interface IEmployer {
 interface IHave {
     skills:           ISkill[],
 //  languages:        any[],
-    work_experiences: IDuration[],
+    work_experiences: IOccupation[],
 //	education:        any[],
 //	education_level:  any[]
 }
