@@ -8,12 +8,11 @@ type SkillSummary = {
     skillOccurrences: SkillOccurrence[];
 }
 
-export const summarizeSkills = async (occupations: Occupation[]): Promise<SkillSummary> => {
+export const summarizeSkills = async (occupations: Occupation[]) => {
 
     const skillOccurrences: SkillOccurrence[] = [];
-    const allSkills = await Promise.all(occupations.map((o) => o.getSkills()));
 
-    allSkills.forEach((a) => {
+    occupations.forEach((a) => {
         a.forEach((s) => {
             const skill = s.getLabel();
             const existing = skillOccurrences.find((s) => s.skill === skill);
@@ -21,7 +20,7 @@ export const summarizeSkills = async (occupations: Occupation[]): Promise<SkillS
             if (existing) {
                 existing.occurrences += 1;
             } else {
-                skillOccurrences.push({skill: skill, occurrences: 1})
+                skillOccurrences.push({skill: skill, occurrences: 1} satisfies SkillOccurrence);
             };
         })
     });
