@@ -12,7 +12,7 @@ header {
 
         li .sc-digi-header-navigation-item-h .sc-digi-header-navigation-item-s > a {
             background-color: var(--color--green--darker);
-            border-radius: .5rem;
+            border-radius: var(--digi--global--border-radius--base);
 
             &:hover {
                 background-color: var(--color--green);
