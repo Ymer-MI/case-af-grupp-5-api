@@ -8,12 +8,12 @@ type SkillSummary = {
     skillOccurrences: SkillOccurrence[];
 }
 
-export const summarizeSkills = async (occupations: Occupation[]) => {
+export const summarizeSkills = (occupations: Occupation[]) => {
 
     const skillOccurrences: SkillOccurrence[] = [];
 
     occupations.forEach((o) => {
-        o.getSkills((s) => {
+        o.getSkills().forEach((s) => {
             const skill = s.getLabel();
             const existing = skillOccurrences.find((s) => s.skill === skill);
 
