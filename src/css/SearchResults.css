@@ -1,15 +1,14 @@
 .results-container {
-  --digi--paragraph-width--large: 100%;
-  color: var(--color--black--darker);
-  margin: 1rem 0;
+    --digi--paragraph-width--large: 100%;
 
-  .results {
-    margin-top: 1rem;
+    color: var(--color--black--darker);
+    margin: 1rem 0;
 
-    digi-typography,
-    ol {
-      list-style-type: none;
-      max-width: var(--digi--paragraph-width--large);
+    .results {
+        margin-top: 1rem;
+
+        digi-typography, ul {
+            max-width: var(--digi--paragraph-width--large);
+        }
     }
-  }
 }

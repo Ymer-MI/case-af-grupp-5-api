@@ -1,9 +1,9 @@
-import type { IHit } from "../models/ISearchResult";
+import type { IHit } from '../models/ISearchResult';
 
 export const removeDuplicates = (list: IHit[]) => {
-    const jobTitles: string[] = [];
+    const jobTitles: string[] = []
 
-    const uniqueJobTitles = list.filter((l) => {
+    return list.filter((l) => {
         if (jobTitles.includes(l.occupation.label)) {
             return false;
         } else {
@@ -11,6 +11,4 @@ export const removeDuplicates = (list: IHit[]) => {
             return true;
         }
     })
-
-    return uniqueJobTitles;
 }

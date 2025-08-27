@@ -1,12 +1,11 @@
-header,
-footer {
-  background-color: var(--color--black--darker);
+header, footer {
+    background-color: var(--color--black--darker);
 }
 
 main {
-  align-self: center;
-  flex: 1;
-  width: 80%;
-  background-color: var(--color--black);
-  padding: 2rem;
+    align-self: center;
+    flex: 1;
+    width: 80%;
+    background-color: var(--color--black);
+    padding: 2rem;
 }
