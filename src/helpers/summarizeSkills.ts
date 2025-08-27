@@ -12,8 +12,8 @@ export const summarizeSkills = async (occupations: Occupation[]) => {
 
     const skillOccurrences: SkillOccurrence[] = [];
 
-    occupations.forEach((a) => {
-        a.forEach((s) => {
+    occupations.forEach((o) => {
+        o.getSkills((s) => {
             const skill = s.getLabel();
             const existing = skillOccurrences.find((s) => s.skill === skill);
 
