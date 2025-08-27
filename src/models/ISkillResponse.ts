@@ -7,7 +7,7 @@ export interface ISkillResponse {
     metadata:               IMetadata;
 }
 
-export interface ICompetency {
+export interface ITermFrequency {
     term:                   string;
     percent_for_occupation: number;
 }
@@ -20,10 +20,10 @@ interface IMetadata {
 }
 
 interface IEnrichedCandidatesTermFrequency {
-    competencies: ICompetency[];
-    geos:         ICompetency[];
-    occupations:  ICompetency[];
-    traits:       ICompetency[];
+    competencies: ITermFrequency[];
+    geos:         ITermFrequency[];
+    occupations:  ITermFrequency[];
+    traits:       ITermFrequency[];
 }
 
 

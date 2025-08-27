@@ -1,10 +1,10 @@
-import type { ICompetency } from "./ISkillResponse";
+import type { ITermFrequency } from './ISkillResponse'
 
 export default class Skill {
     private label: string
     private percent: number
 
-    constructor({ term, percent_for_occupation }: ICompetency) {
+    constructor({ term, percent_for_occupation }: ITermFrequency) {
         this.label = term
         this.percent = percent_for_occupation
     }
