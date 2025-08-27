@@ -12,7 +12,7 @@ export const SearchResultCard = ({ occupation }: SearchResultCardProps) => <li>
         <DigiTypography>
             <h3>{ occupation.getLabel() }</h3>
             <h4>Vanliga kompetenser</h4>
-            { occupation.getSkills().map((s, i) => <DigiTag afText={ s.getLabel() } afSize={ TagSize.SMALL } afNoIcon={ true } key={ i }/>) }
         </DigiTypography>
+        { occupation.getSkills().map(s => <DigiTag afText={ s.getLabel() } afSize={ TagSize.SMALL } afNoIcon={ true } key={ `${ Math.round(s.getPercent()) }-${ s.getLabel() }` }/>) }
     </DigiLayoutBlock>
 </li>

@@ -11,5 +11,5 @@ export default class OccupationSkillsService {
             occupation_id,
             include_metadata: true
         }
-    })).metadata.enriched_candidates_term_frequency.competencies.filter(s => s.percent_for_occupation > 1.9).map(s => new Skill(s))
+    })).metadata.enriched_candidates_term_frequency.competencies.filter(s => s.percent_for_occupation > 3.9).map(s => new Skill(s))
 }
