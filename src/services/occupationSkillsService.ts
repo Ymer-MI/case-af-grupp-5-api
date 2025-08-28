@@ -1,7 +1,7 @@
-import type { IOccupation } from "../models/ISearchResult";
-import type { ISkillResponse } from "../models/ISkillResponse";
-import Skill from "../models/Skill";
-import { BaseService } from "./baseService";
+import type { IOccupation } from '../models/ISearchResult'
+import type { ISkillResponse } from '../models/ISkillResponse'
+import Skill from '../models/Skill'
+import { BaseService } from './baseService'
 
 export default class OccupationSkillsService {
     private api = new BaseService('https://jobed-connect-api.jobtechdev.se/v1')
