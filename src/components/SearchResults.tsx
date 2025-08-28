@@ -1,7 +1,6 @@
 import '../css/SearchResults.css'
 import type Occupation from '../models/Occupation'
 import { DigiTypography } from '@digi/arbetsformedlingen-react'
-import "../css/SearchResults.css"
 import { SearchResultCard } from './SearchResultCard'
 
 

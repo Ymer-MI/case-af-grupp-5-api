@@ -1,111 +1,15 @@
 .results-container {
     --digi--paragraph-width--large: 100%;
 
-  /* 2 kolumn-layout */
-  .digi-layout-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
-    margin-top: 1rem;
+    color: var(--color--black--darker);
+    margin: 1rem 0;
+
+    .results {
+        margin-top: 1rem;
+
+        digi-typography, ul {
+            max-width: var(--digi--paragraph-width--large);
+        }
+    }
+             
   }
-
-  .digi-layout-columns__left {
-    min-width: 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
-  }
-
-  .digi-layout-columns__right {
-    min-width: 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
-  }
-
-  .results {
-    padding: 1rem;
-
-    h4 {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    p {
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-      color: var(--color--black);
-    }
-
-    digi-typography,
-    ol {
-      list-style-type: none;
-      max-width: var(--digi--paragraph-width--large);
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  .competency-chart-container {
-    margin-top: 1rem;
-  }
-
-  /* Styling för HorizontalCompetenceChart */
-  .horizontal-competence-chart {
-    margin-top: 1rem;
-
-    h4 {
-      color: var(--color--white);
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .chart-bars {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .chart-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .chart-label {
-      min-width: 150px;
-      font-size: 0.8rem;
-      color: var(--color--white);
-      text-align: right;
-      flex-shrink: 0;
-    }
-
-    .chart-bar-container {
-      flex: 1;
-      position: relative;
-      height: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    .chart-bar {
-      height: 100%;
-      background-color: var(--color--green);
-      border-radius: 10px;
-      transition: width 0.3s ease;
-      min-width: 2px;
-    }
-
-    .chart-value {
-      position: absolute;
-      right: 8px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--color--white);
-    }
-  }
-}

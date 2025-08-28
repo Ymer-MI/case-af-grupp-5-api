@@ -1,0 +1,15 @@
+rect[Style] {
+    fill: var(--color--green--darker);
+
+    &:hover {
+        fill: var(--color--green);
+    }
+}
+.sc-digi-bar-chart-h .table.sc-digi-bar-chart{
+    background: none;
+    overflow-y: hidden; 
+}
+
+caption{
+    display: none;
+}

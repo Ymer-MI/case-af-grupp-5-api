@@ -1,3 +1,5 @@
+import type Occupation from '../models/Occupation'
+
 type SkillOccurrence = {
     skill: string;
     occurrences: number;
