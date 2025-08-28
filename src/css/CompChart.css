@@ -1,4 +1,4 @@
-rect[Style] {
+rect.bar {
     fill: var(--color--green--darker);
 
     &:hover {
