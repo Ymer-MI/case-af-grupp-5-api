@@ -1,19 +1,18 @@
 import '../css/SearchResultCard.css'
-import type { IHit } from '../models/ISearchResult'
-import skillListBuilder from '../helpers/skillListBuilder'
+import type Occupation from '../models/Occupation'
 import { LayoutBlockVariation, TagSize } from '@digi/arbetsformedlingen'
 import { DigiLayoutBlock, DigiTag, DigiTypography } from '@digi/arbetsformedlingen-react'
 
 type SearchResultCardProps = {
-    ad: IHit
+    occupation: Occupation
 }
 
-export const SearchResultCard = ({ ad }: SearchResultCardProps) => <li>
+export const SearchResultCard = ({ occupation }: SearchResultCardProps) => <li>
     <DigiLayoutBlock afVariation={LayoutBlockVariation.PRIMARY} afVerticalPadding>
         <DigiTypography>
-            <h3>{ad.occupation.label}</h3>
+            <h3>{ occupation.getLabel() }</h3>
             <h4>Vanliga kompetenser</h4>
-            { skillListBuilder(ad).map((s, i) => <DigiTag afText={ s } afSize={ TagSize.SMALL } afNoIcon={ true } key={ i }/>) }
         </DigiTypography>
+        { occupation.getSkills().map(s => <DigiTag afText={ s.getLabel() } afSize={ TagSize.SMALL } afNoIcon={ true } key={ `${ Math.round(s.getPercent()) }-${ s.getLabel() }` }/>) }
     </DigiLayoutBlock>
 </li>
