@@ -2,6 +2,7 @@ form {
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 1em;
 
     > * {
         max-width: 50%;
@@ -13,5 +14,9 @@ form {
         outline: var(--size-outline) solid var(--color--green--darker);
         outline-offset: calc(var(--size-outline) * -1);
         box-shadow: none;
+    }
+
+    .sc-digi-form-select-h {
+        --digi--form-select--select--border-radius: var(--digi--global--border-radius--base);
     }
 }

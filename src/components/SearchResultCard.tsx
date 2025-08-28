@@ -1,20 +1,12 @@
-import {
-  LayoutBlockVariation,
-  TagSize,
-  TypographyVariation,
-} from "@digi/arbetsformedlingen";
-import {
-  DigiLayoutBlock,
-  DigiTag,
-  DigiTypography,
-} from "@digi/arbetsformedlingen-react";
-import skillListBuilder from "../helpers/skillListBuilder";
-import "../css/SearchResultCard.css";
-import type { IHit } from "../models/ISearchResult";
+import '../css/SearchResultCard.css'
+import type { IHit } from '../models/ISearchResult'
+import skillListBuilder from '../helpers/skillListBuilder'
+import { LayoutBlockVariation, TagSize, TypographyVariation } from '@digi/arbetsformedlingen'
+import { DigiLayoutBlock, DigiTag, DigiTypography } from '@digi/arbetsformedlingen-react'
 
 type SearchResultCardProps = {
-  ad: IHit;
-};
+    ad: IHit
+}
 
 export const SearchResultCard = (props: SearchResultCardProps) => {
     const skills = skillListBuilder(props.ad);

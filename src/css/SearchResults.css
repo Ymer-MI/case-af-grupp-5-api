@@ -1,7 +1,5 @@
 .results-container {
-  --digi--paragraph-width--large: 100%;
-  color: var(--color--black--darker);
-  margin: 1rem 0;
+    --digi--paragraph-width--large: 100%;
 
   /* 2 kolumn-layout */
   .digi-layout-columns {
