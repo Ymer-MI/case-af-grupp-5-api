@@ -31,6 +31,13 @@
         --digi--button--color--text--primary--hover: var(--color--black);
         --digi--button--color--icon--primary--hover: var(
             --digi--button--color--icon--primary--hover
+
+
         );
+       
+        .digi-button.sc-digi-button{
+ --COLOR--TEXT--HOVER: var(--color--green--darker);
+ --COLOR--ICON--HOVER: var( --COLOR--TEXT--HOVER);
+        }
     }
 }
