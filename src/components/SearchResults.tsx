@@ -3,6 +3,7 @@ import type Occupation from '../models/Occupation'
 import { DigiTypography } from '@digi/arbetsformedlingen-react'
 import { SearchResultCard } from './SearchResultCard'
 
+
 type SearchResultsProps = {
     query: string,
     occupations: Occupation[]
