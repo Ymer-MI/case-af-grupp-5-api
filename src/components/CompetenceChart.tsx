@@ -17,7 +17,7 @@ export const CompetenceChart = ({ occupations }: CompetenceChartProps) => {
     
     const topSkills = skillSummary.skillOccurrences
         .sort((a, b) => b.occurrences - a.occurrences)
-        .slice(0, 7)
+        
 
     const chartData: ChartLineData = {
         data: {
