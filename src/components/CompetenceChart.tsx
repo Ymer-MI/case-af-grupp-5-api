@@ -21,7 +21,7 @@ export const CompetenceChart = ({ occupations }: CompetenceChartProps) => {
         },
         x: 'Kompetenser',
         y: 'Antal',
-        title: 'Kompetensöversikt'
+        title: 'Statistik över kompetenser'
     }
 
     return occupations.length && <DigiBarChart afChartData={ chartData } afHeadingLevel='h3' afVariation={ BarChartVariation.Horizontal }/>

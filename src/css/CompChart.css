@@ -1,15 +1,24 @@
 rect.bar {
-    fill: var(--color--green--darker);
+  fill: var(--color--green--darker);
 
-    &:hover {
-        fill: var(--color--green);
-    }
-}
-.sc-digi-bar-chart-h .table.sc-digi-bar-chart{
-    background: none;
-    overflow-y: hidden; 
+  &:hover {
+    fill: var(--color--green);
+  }
 }
 
-caption{
-    display: none;
+.sc-digi-bar-chart-h .table.sc-digi-bar-chart {
+  background: none;
+  overflow-y: hidden;
+}
+
+.sc-digi-bar-chart-h .topWrapper.sc-digi-bar-chart {
+  align-items: flex-start;
+}
+
+caption {
+  display: none;
+}
+
+g.tick {
+  pointer-events: none;
 }
